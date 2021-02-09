@@ -9,4 +9,12 @@ as well as the doctors available for their services as of the moment.
 The system will have two types accounts, an admin and a visitor side wherein the admin account are the ones responsible 
 for managing that available beds as well as doctors availability time.
 
-Further details on this portion will be updated later on as the development progresses.
+TODO:
+
+Pages: login.php, lobby.php, showAll.php, showOnly.php 
+Functions: 
+- main system: validateLogin.php (put a check user subfunction)
+- userDB: createUser.php, updateUser.php, setAs.php, deleteUser.php
+- hospRoomDB: updateRoom.php, clearRoom.php
+- doctorsDB: createDoctor.php, updateDoctor.php, deleteDoctor.php
+Databases: userDB, hospitalDB, doctorDB
