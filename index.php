@@ -6,7 +6,8 @@
 
   <body>
 
-    <form name="login_old_member" action="index.php" method="GET">
+    <form name="login_old_member" action="validateLogin.php" method="POST">
+      <h2>Log in</h2>
       <div>
         <input type="text" id = "username" name = "username" class="form-control" placeholder="Enter Username" required="true"/>
       </div>
