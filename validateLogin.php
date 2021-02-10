@@ -1,10 +1,10 @@
 <?php
 
   require ("db_connection.php");
-  $username = $_POST['username'];
-  $password = $_POST['password'];
+  $username = $_GET['username'];
+  $password = $_GET['password'];
   
-  $usersql = $conn->prepare ("Select * from user where username = '$username' AND password = '$password'");
+  $usersql = $conn->prepare ("Select * from userDB where username = '$username' AND password = '$password'");
   $usersql->execute();
 
   if($user = $usersql->fetch()) {
@@ -15,7 +15,7 @@
           alert ('WELCOME USER');
         </script>";
 
-      header ("Location: index.php");   //  TODO: Change location
+      header ("Location: showAll.php");
     }
 
     else{
@@ -25,7 +25,7 @@
           alert ('WELCOME USER');
         </script>";
 
-      header ("Location: index.php");    // TODO: Change location with $id for user-level access only
+      header ("Location: showOnly.php");    // TODO: Change location with $id for user-level access only
     }
   }
 
