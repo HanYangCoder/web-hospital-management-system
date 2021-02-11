@@ -134,10 +134,12 @@
         </tr>
       </tbody>
 
-      <button type="button" onclick="createDoctorForm.php?id=<?= $userList['userID']?>">Click Me!</button>
-
       <?php endforeach; ?>
     </table>
+
+    <form method="GET" action="createDoctorForm.php">
+      <button type="submit">Create Doctor Info</button>
+    </form>
 
   </body>
 </html>
