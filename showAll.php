@@ -45,18 +45,21 @@
         </tr>
       </thead>
 
-      <?php foreach ($showUserDb as $UserList): ?>
+      <?php foreach ($showUserDb as $userList): ?>
 
       <tbody>
         <tr>
 
-          <td><p> <?= $UserList['userID']; ?> </p></td>
-          <td><p> <?= $UserList['username']; ?> </p></td>
-          <td><p> <?= $UserList['firstName']; ?> </p></td>
-          <td><p> <?= $UserList['lastName']; ?> </p></td>
-          <td><p> <?= $UserList['password']; ?> </p></td>
-          <td><p> <?= $UserList['email']; ?> </p></td>
-          <td><p> <?= $UserList['userrole']; ?> </p></td>
+          <td><p> <?= $userList['userID']; ?> </p></td>
+          <td><p> <?= $userList['username']; ?> </p></td>
+          <td><p> <?= $userList['firstName']; ?> </p></td>
+          <td><p> <?= $userList['lastName']; ?> </p></td>
+          <td><p> <?= $userList['password']; ?> </p></td>
+          <td><p> <?= $userList['email']; ?> </p></td>
+          <td><p> <?= $userList['userrole']; ?> </p></td>
+          <td><a href="updateUserForm.php?id=<?= $userList['userID'] ?>">Update</a></td>
+          <td><a href="deleteUser.php?id=<?= $userList['userID'] ?>">Delete</a></td>
+          <td><a href="setAdminVisitor.php?id=<?= $userList['userID'] ?>">Set as Admin/Visitor</a></td>
 
         </tr>
       </tbody>
@@ -78,14 +81,14 @@
         </tr>
       </thead>
 
-      <?php foreach ($showHospitalDb as $HospitalList): ?>
+      <?php foreach ($showHospitalDb as $hospitalList): ?>
 
       <tbody>
         <tr>
 
-          <td><p> <?= $HospitalList['roomNum']; ?> </p></td>
-          <td><p> <?= $HospitalList['patientName']; ?> </p></td>
-          <td><p> <?= $HospitalList['docInCharge']; ?> </p></td>
+          <td><p> <?= $hospitalList['roomNum']; ?> </p></td>
+          <td><p> <?= $hospitalList['patientName']; ?> </p></td>
+          <td><p> <?= $hospitalList['docInCharge']; ?> </p></td>
 
         </tr>
       </tbody>
@@ -111,18 +114,18 @@
         </tr>
       </thead>
 
-      <?php foreach ($showDoctorDb as $DoctorList): ?>
+      <?php foreach ($showDoctorDb as $doctorList): ?>
 
       <tbody>
         <tr>
 
-          <td><p> <?= $DoctorList['doctorID']; ?> </p></td>
-          <td><p> <?= $DoctorList['firstName']; ?> </p></td>
-          <td><p> <?= $DoctorList['lastName']; ?> </p></td>
-          <td><p> <?= $DoctorList['department']; ?> </p></td>
-          <td><p> <?= $DoctorList['specialty']; ?> </p></td>
-          <td><p> <?= $DoctorList['contactNum']; ?> </p></td>
-          <td><p> <?= $DoctorList['isAvailable']; ?> </p></td>
+          <td><p> <?= $doctorList['doctorID']; ?> </p></td>
+          <td><p> <?= $doctorList['firstName']; ?> </p></td>
+          <td><p> <?= $doctorList['lastName']; ?> </p></td>
+          <td><p> <?= $doctorList['department']; ?> </p></td>
+          <td><p> <?= $doctorList['specialty']; ?> </p></td>
+          <td><p> <?= $doctorList['contactNum']; ?> </p></td>
+          <td><p> <?= $doctorList['isAvailable']; ?> </p></td>
 
         </tr>
       </tbody>
