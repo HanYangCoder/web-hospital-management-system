@@ -89,6 +89,8 @@
           <td><p> <?= $hospitalList['roomNum']; ?> </p></td>
           <td><p> <?= $hospitalList['patientName']; ?> </p></td>
           <td><p> <?= $hospitalList['docInCharge']; ?> </p></td>
+          <td><a href="updateHospitalRoomForm.php?id=<?= $hospitalList['roomNum'] ?>">Update Room</a></td>
+          <td><a href="clearHospitalRoom.php?id=<?= $hospitalList['roomNum'] ?>">Clear Room Data</a></td>
 
         </tr>
       </tbody>
@@ -126,9 +128,13 @@
           <td><p> <?= $doctorList['specialty']; ?> </p></td>
           <td><p> <?= $doctorList['contactNum']; ?> </p></td>
           <td><p> <?= $doctorList['isAvailable']; ?> </p></td>
+          <td><a href="updateDoctorForm.php?id=<?= $doctorList['doctorID'] ?>">Update</a></td>
+          <td><a href="deleteDoctor.php?id=<?= $doctorList['doctorID'] ?>">Delete</a></td>
 
         </tr>
       </tbody>
+
+      <button type="button" onclick="createDoctorForm.php?id=<?= $userList['userID']?>">Click Me!</button>
 
       <?php endforeach; ?>
     </table>
