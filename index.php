@@ -21,6 +21,7 @@
       </div>
     </form>
 
+    <p><a href="signupForm.php">Create an Account</a></p>
 
   </body>
 </html>
