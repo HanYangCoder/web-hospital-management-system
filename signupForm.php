@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Online Hosp Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <style>
+    .login-form {
+      width: 500px;
+      margin: 50px auto;
+      font-size: 15px;
+    }
+    .login-form form {
+      margin-bottom: 15px;
+      background: #f7f7f7;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+      padding: 30px;
+    }
+    .login-form h2 {
+      margin: 0 0 15px;
+    }
+    .form-control, .btn {
+      min-height: 38px;
+      border-radius: 2px;
+    }
+    .btn {        
+      font-size: 15px;
+      font-weight: bold;
+      background: #D50000;
+    }
+    </style>
   </head>
 
   <body>
     <div class="login-form">
 
       <form name= "sign_up" action="signupSave.php" method="POST">
-        <h2>Sign Up</h2>
+        <h2 class="text-center">Sign Up</h2>
 
           <!--Username-->
           <div class="form-group">
@@ -37,10 +72,10 @@
 
           <!--Create Account-->
           <div class="form-group">
-            <input type="submit" value="SIGN UP" class="btn btn-primary btn-block"/>
+            <input type="submit" class="btn btn-primary btn-block" value="SIGN UP" class="btn btn-primary btn-block"/>
           </div>       
       </form>
-      <p><a href="index.php">Sign in to an account instead</a></p>
+      <p class="text-center" style="color:#D50000;"><a href="index.php">Sign in to an account instead</a></p>
     </div>
   </body>
 </html>

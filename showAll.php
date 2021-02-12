@@ -20,17 +20,54 @@
 <html>
 
   <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
-      table, th,td {
-        border: 1px solid black;
+      table, th, td{
+        border-collapse: collapse;
+        padding: 5px;
       }
+
+      th{
+        text-align: center;
+        background: #D50000;
+        font-size: 17px;
+        color: #ffffff;
+      }
+
+      td{
+        background: #f7f7f7;
+        font-size: 15px;
+      }
+
+      a{
+        color: #D50000;
+      }
+
+      .center{
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+      }
+
+      .center-button{
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        background-color: #D50000;
+      }
+
     </style>
   </head>
 
   <body>
-
+    
+  <h2 class="text-center">User List</h2>
     <!--userDB table-->
-    <table>
+    <table class="center">
       <thead>
         <tr>
 
@@ -40,7 +77,8 @@
           <th><p> Last name <p></th>
           <th><p> Password <p></th>
           <th><p> Email <p></th>
-          <th><p> User role <p></th>
+          <th><p> User role <p></th><th></th>
+          <th><p> Actions </p></th><th></th>
         
         </tr>
       </thead>
@@ -67,16 +105,15 @@
       <?php endforeach; ?>
     </table>
 
-    <br>
-
-    <!--hospitalDB table-->
-    <table>
+    <br><br><br><h2 class="text-center">Hospital Rooms List</h2>
+    <table class="center">
       <thead>
         <tr>
 
           <th><p> Room Number <p></th>
           <th><p> Patient Name <p></th>
           <th><p> Doctor in charge <p></th>
+          <th><p> Actions </p></th><th></th>
         
         </tr>
       </thead>
@@ -98,10 +135,8 @@
       <?php endforeach; ?>
     </table>
 
-    <br>
-
-    <!--doctorDB table-->
-    <table>
+    <br><br><br><h2 class="text-center">Hospital Doctors List</h2>
+    <table class="center">
       <thead>
         <tr>
 
@@ -112,6 +147,7 @@
           <th><p> Specialty <p></th>
           <th><p> Contact number <p></th>
           <th><p> Is Available <p></th>
+          <th><p> Actions </p></th><th></th>
         
         </tr>
       </thead>
@@ -138,8 +174,10 @@
     </table>
 
     <form method="GET" action="createDoctorForm.php">
-      <button type="submit">Create Doctor Info</button>
+        <button type="submit" class="btn btn-primary btn-block center-button" style="width: 20%;" >Create New Doctor Info</button>
     </form>
+
+    <br><br>
 
   </body>
 </html>
